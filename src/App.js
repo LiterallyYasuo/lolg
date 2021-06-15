@@ -1,22 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          UNDER CONSTRUCTION!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <video className='videoTag' autoPlay muted controls loop>
+        <source src='https://lolg-documents.s3.us-west-1.amazonaws.com/yasuo.mp4' type='video/mp4' />
+      </video>
       </header>
     </div>
   );
