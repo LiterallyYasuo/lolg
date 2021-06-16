@@ -1,17 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Navigation, Footer, Home, Links, About } from './components'
 
-function App() {
+function App () {
   return (
     <div className="App">
-      <header className="App-header">
-      <video className='videoTag' autoPlay muted controls loop>
-        <source src='https://lolg-documents.s3.us-west-1.amazonaws.com/yasuo.mp4' type='video/mp4' />
-      </video>
-      </header>
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route path="/" exact component={() => <Home />} />
+          <Route path="/links" exact component={() => <Links />} />
+          <Route path="/about" exact component={() => <About />} />
+        </Switch>
+        <Footer />
+      </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
